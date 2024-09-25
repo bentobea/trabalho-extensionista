@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Vestibular</title>
+    <link rel="stylesheet" href="stylesss.css">
+</head>
+<body>
+    <div class="container">
+        <h1>O Despertar da tecnologia na Educação
+        </h1>
+
+        <h3>
+            Avaliação Online do 4º Ano do Ensino Fundamental
+        </h3>
+
+        <p> Bem-vindo ao nosso portal de Avaliação Online.
+        </p>
+
+        <p>
+        Estamos animados em anunciar a realização da Avaliação do 4º ano do Ensino Médio, que acontecerá de forma virtual. Este é um passo importante para entendermos melhor as necessidades educacionais de nossos alunos e promover melhorias no ensino.
+        </p>
+
+        <p>
+            Por que essa avaliação é importante?
+        </p>
+
+        <p>
+         Nosso objetivo é identificar os pontos fortes e as áreas que precisam de atenção, permitindo que possamos adaptar nossas práticas pedagógicas e oferecer um aprendizado ainda mais eficaz. Sua participação é fundamental para construirmos um ambiente educacional mais enriquecedor.
+         </p>
+
+        <div class="form-section">
+            <h2>Cadastro do Aluno(a)</h2>
+            <input type="text" id="nome" placeholder="Nome do Aluno" />
+            <button onclick="registrarAluno();">Registrar</button>
+        </div>
+
+        <div class="form-section hidden" id="avaliacaoSection">
+            <h2>Selecione seu nome para iniciar a avaliação</h2>
+            <select id="alunoSelect" onchange="carregarQuestoes()"></select>
+            <div id="questions" class="hidden"></div>
+            <button onclick="submeterAvaliação()">Submeter Avaliação</button>
+            <p id="feedback"></p>
+        </div>
+
+        <div class="form-section">
+            <h2>Relatórios</h2>
+            <button onclick="gerarRelatorio()">Gerar Relatório</button>
+            <pre id="relatorio">     
+            </pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
